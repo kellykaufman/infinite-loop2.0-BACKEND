@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   post "/anxieties/:id" => "anxieties#create"
 
+  get "/anxieties/:id" => "anxieties#show"
+
   patch "/anxieties/:id" =>"anxieties#update"
 
   delete "/anxieties/:id" => "anxieties#delete"

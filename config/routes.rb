@@ -4,33 +4,26 @@ Rails.application.routes.draw do
   # ANXIETY ROUTES
   get "/anxieties" => "anxieties#index"
 
-  post "/anxieties/:id" => "anxieties#create"
-
   get "/anxieties/:id" => "anxieties#show"
+
+  post "/anxieties/:id" => "anxieties#create"
 
   patch "/anxieties/:id" =>"anxieties#update"
 
-  delete "/anxieties/:id" => "anxieties#delete"
+  delete "/anxieties/:id" => "anxieties#destroy"
+
 
   # USER ROUTES
+  post "/users" => "users#create"
 
-  get
+  delete "/users" => "users#destroy"
 
-  post
-  
-  patch
 
-  delete
 
 
   # SESSION ROUTES
+  post "/sessions" => "sessions#create"
 
-  get
-
-  post 
-
-  patch
-
-  delete 
-
+  delete "/sessions" => "sessions#destroy"
+  
 end

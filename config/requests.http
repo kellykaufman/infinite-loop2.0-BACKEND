@@ -1,0 +1,25 @@
+###Anxieties Index
+GET http://localhost:3000/anxieties 
+
+
+###Anxieties Show
+POST http://localhost:3000/anxieties 
+Content-Type: application/json
+
+{
+"life_theme": "Boys",
+"intrusive_thought_or_feeling": "He loves me, he loves me not",
+"obsessional_theme": "Catastrophizing, Mindreading",
+"opposite_thought": "I am wonderful no matter what!",
+"opposite_action": "Yoga",
+"timer": 30
+}
+
+
+###Anxieties Create
+
+
+###Anxieties Update
+
+
+###Anxieties Destroy

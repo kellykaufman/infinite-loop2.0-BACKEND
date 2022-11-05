@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # USER ROUTES
   post "/users" => "users#create"
 
-  delete "/users" => "users#destroy"
+  patch "/users" => "users#update"
+  
+  # delete "/users" => "users#destroy"
 
 
 

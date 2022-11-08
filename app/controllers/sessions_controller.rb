@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
           exp: 24.hours.from_now.to_i, # the expiration time
         },
         Rails.application.credentials.fetch(:secret_key_base), # the secret key
-        "HS256" # MIGHT NEED TO REPLACE the encryption algorithm
+        "HS256" # (MIGHT NEED TO REPLACE) the encryption algorithm
       )
       render json: { jwt: jwt, user_name: user.user_name, user_id: user.id }, status: :created
     else

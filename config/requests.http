@@ -1,3 +1,24 @@
+###Users Create (Signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "user_name": "GregHirsch3",
+  "password": "password", 
+  "password_confirmation": "password" 
+}
+
+
+###Sessions Create
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "user_name": "GregHirsch3",
+  "password": "password"
+}
+
+
 ###Anxieties Index
 GET http://localhost:3000/anxieties 
 
@@ -23,3 +44,6 @@ Content-Type: application/json
 
 
 ###Anxieties Destroy
+
+
+

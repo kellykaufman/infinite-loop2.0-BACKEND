@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def create
-    user = User.new(name: params[:name], password:params[:password], password_confirmation: params[:password_confirmation])
+    user = User.new(user_name: params[:user_name], password:params[:password], password_confirmation: params[:password_confirmation])
 
     # happy/sad paths
     if user.save
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def update
     user = User.find_by(id: params[:id])
 
-    user.name = params[:name] || user.name
+    user.user_name = params[:user_name] || user.user_name
     user.password = params[:password] || user.password
     user.password_confirmation = params[:password_confirmation] || user.password_confirmation
 

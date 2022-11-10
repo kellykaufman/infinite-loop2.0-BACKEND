@@ -13,15 +13,15 @@ class AnxietiesController < ApplicationController
     render json: anxieties  
   end
 
-  # def create
-  #   anxiety = Anxiety.new(life_theme: params[:life_theme], intrusive_thought_or_feeling: params[intrusive_thought_or_feeling], obsessional_theme:params[obsessional_theme], opposite_thought:params[opposite_thought], opposite_action:params[opposite_action], timer:params[:timer], progress:params[:progress], user_id:current_user.id) 
+  def create
+    anxiety = Anxiety.new(life_theme: params[:life_theme], intrusive_thought_or_feeling: params[intrusive_thought_or_feeling], obsessional_theme:params[obsessional_theme], opposite_thought:params[opposite_thought], opposite_action:params[opposite_action], timer:params[:timer], progress:params[:progress], user_id:current_user.id) 
 
-  # if Anxiety.save
-  #   render json: anxiety, status: :created
-  # else
-  #   render json: {errors: anxiety.errors.full_messages}, status: 422   
-  # end
-  # end
+  if Anxiety.save
+    render json: anxiety, status: :created
+  else
+    render json: {errors: anxiety.errors.full_messages}, status: 422   
+  end
+  end
 
   # def update
   #   anxiety = anxiety.find_by(user: params[:id])

@@ -1,4 +1,4 @@
-###Users Create (Signup)
+###USERS CREATE (Signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 
-###Sessions Create
+###SESSIONS CREATE (Login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
@@ -19,17 +19,27 @@ Content-Type: application/json
 }
 
 
-###Anxieties Index
+###ANXIETIES INDEX
 GET http://localhost:3000/anxieties 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
+Content-Type: application/json
 
 
-###Anxieties Show
-POST http://localhost:3000/anxieties 
+###ANXIETY SHOW
+GET http://localhost:3000/anxieties/1.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
+Content-Type: application/json
+
+
+
+###ANXIETIES CREATE
+POST http://localhost:3000/anxieties.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
 Content-Type: application/json
 
 {
-"life_theme": "Boys",
-"intrusive_thought_or_feeling": "He loves me, he loves me not",
+"life_theme": "Girls",
+"intrusive_thought_or_feeling": "She loves me, she loves me not",
 "obsessional_theme": "Catastrophizing, Mindreading",
 "opposite_thought": "I am wonderful no matter what!",
 "opposite_action": "Yoga",
@@ -37,13 +47,10 @@ Content-Type: application/json
 }
 
 
-###Anxieties Create
+###ANXIETIES UPDATE
 
 
-###Anxieties Update
-
-
-###Anxieties Destroy
+###ANXIETIES DESTROY
 
 
 

@@ -21,20 +21,20 @@ Content-Type: application/json
 
 ###ANXIETIES INDEX
 GET http://localhost:3000/anxieties 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
 Content-Type: application/json
 
 
 ###ANXIETY SHOW
 GET http://localhost:3000/anxieties/1.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
 Content-Type: application/json
 
 
 
 ###ANXIETIES CREATE
 POST http://localhost:3000/anxieties.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyMDY1NjF9.Qaq5snifTAwX6uDXCqAUzIMzzM2bIHMVffrq-zjEm80
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
 Content-Type: application/json
 
 {

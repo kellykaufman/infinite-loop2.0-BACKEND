@@ -1,9 +1,12 @@
+### Moved authorization above content-type for all 
+
+
 ###USERS CREATE (Signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "user_name": "GregHirsch3",
+  "user_name": "Kellyk3",
   "password": "password", 
   "password_confirmation": "password" 
 }
@@ -21,36 +24,51 @@ Content-Type: application/json
 
 ###ANXIETIES INDEX
 GET http://localhost:3000/anxieties 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njk4NTQ1NTR9.PGnb-g5HSa5zQaOyUR0g1mIZMFHpShv4NAS3W2RBvnQ
 Content-Type: application/json
 
 
 ###ANXIETY SHOW
-GET http://localhost:3000/anxieties/1.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
+GET http://localhost:3000/anxieties/8.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njk4NTQ1NTR9.PGnb-g5HSa5zQaOyUR0g1mIZMFHpShv4NAS3W2RBvnQ
 Content-Type: application/json
 
 
 
 ###ANXIETIES CREATE
 POST http://localhost:3000/anxieties.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgzMDc4NDh9.xmNtGkaDbDcNLdqKAZMWLono6HsApAqST52DMCYWbHM
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njk4NTQ1NTR9.PGnb-g5HSa5zQaOyUR0g1mIZMFHpShv4NAS3W2RBvnQ
 Content-Type: application/json
 
 {
-"life_theme": "Girls",
-"intrusive_thought_or_feeling": "She loves me, she loves me not",
-"obsessional_theme": "Catastrophizing, Mindreading",
-"opposite_thought": "I am wonderful no matter what!",
-"opposite_action": "Yoga",
-"timer": 30
+"life_theme": "School",
+"intrusive_thought_or_feeling": "That I will get an F",
+"obsessional_theme": "Catastrophizing",
+"opposite_thought": "I will probably get a C",
+"opposite_action": "Breathe deep",
+"timer": 1
 }
 
 
 ###ANXIETIES UPDATE
+PATCH http://localhost:3000/anxieties/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njk4NTQ1NTR9.PGnb-g5HSa5zQaOyUR0g1mIZMFHpShv4NAS3W2RBvnQ
+Content-Type: application/json
+
+{
+  
+"life_theme": "Work",
+"intrusive_thought_or_feeling": "That I won't be promoted",
+"obsessional_theme": "Catastrophizing",
+"opposite_thought": "I know that Kendall will have my back",
+"opposite_action": "Breathe deep",
+"timer": 1
+
+}
 
 
-###ANXIETIES DESTROY
 
-
-
+# ###ANXIETIES DESTROY
+# DELETE http://localhost:3000/anxieties/1.json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjkwNjc2MTR9.2Vef-f-eagzJVw_dIzGuFLMUq8dP5B9Y-hFxvicsgSM
+# Content-Type: application/json

@@ -28,4 +28,7 @@ class UsersController < ApplicationController
     end
   end
 
+  
+  # Add delete user method eventually...
+
 end

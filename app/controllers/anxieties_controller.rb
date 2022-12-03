@@ -51,10 +51,11 @@ end
 
 
   # MUST FIX DESTROY METHOD, CALLING OUT ':'
-  # def destroy
-  #   anxiety = Anxiety.find_by(id: params[:id])
+  def destroy
+    anxiety = current_user.anxieties.find_by(id: params[:id])
+    # anxiety = Anxiety.find_by(id: params[:id])
     
-  #   anxiety.delete
-  #   render json: {message: "Anxiety destroyed!"}
-  # end
+    anxiety.delete
+    render json: {message: "Anxiety destroyed!"}
+  end
 end

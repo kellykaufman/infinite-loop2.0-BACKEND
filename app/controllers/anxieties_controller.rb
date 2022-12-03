@@ -38,6 +38,15 @@ opposite_action = params[:opposite_action] || anxiety.opposite_action
 timer = params[:timer] || anxiety.timer
 progress = params[:progress] || anxiety.progress
 anxiety.user_id = current_user.id || anxiety.user_id
+
+# Happy / Sad Paths
+  if anxiety.save
+    render json: anxiety
+  else
+    render json: {errors: anxiety.errors.full_messages}, status: 422
+  end
+
+
 end
 
 

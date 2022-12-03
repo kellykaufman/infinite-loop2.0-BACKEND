@@ -1,12 +1,9 @@
-### Moved authorization above content-type for all 
-
-
 ###USERS CREATE (Signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "user_name": "Sean94",
+  "user_name": "Mom1960",
   "password": "password", 
   "password_confirmation": "password" 
 }
@@ -17,52 +14,54 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "user_name": "Sean94",
+  "user_name": "GregHirsch3",
   "password": "password"
 }
 
 
 ###ANXIETIES INDEX
 GET http://localhost:3000/anxieties 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Njk5NDA4NTN9.95nUoTUDL92BDMCTfb9goG9fAAIatopIJXH1KSWS8nw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzAxOTU0OTB9.A_j8mx69HEqtF7jW0_qU8MYobvHoHZDWsvpFvNVSOuI
 Content-Type: application/json
 
 
 ###ANXIETY SHOW
 GET http://localhost:3000/anxieties/8.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Njk5NDA4NTN9.95nUoTUDL92BDMCTfb9goG9fAAIatopIJXH1KSWS8nw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzAxOTU0OTB9.A_j8mx69HEqtF7jW0_qU8MYobvHoHZDWsvpFvNVSOuI
 Content-Type: application/json
 
 
 
 ###ANXIETIES CREATE
 POST http://localhost:3000/anxieties.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Njk5NDA4NTN9.95nUoTUDL92BDMCTfb9goG9fAAIatopIJXH1KSWS8nw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzAxOTU0OTB9.A_j8mx69HEqtF7jW0_qU8MYobvHoHZDWsvpFvNVSOuI
 Content-Type: application/json
 
 {
-"life_theme": "Love",
-"intrusive_thought_or_feeling": "That I won't fall in love",
-"obsessional_theme": "CATASTROPHIZING",
-"opposite_thought": "I will",
-"opposite_action": "Eat chocolate",
-"timer": 1
+"life_theme": "Work",
+"intrusive_thought_or_feeling": "I think we hear for you sounds terrible",
+"obsessional_theme": "TUNNEL VISION",
+"opposite_thought": "I have no control",
+"opposite_action": "Look at waterfall",
+"timer": 20,
+"progress": "Feeling better"
 }
 
 
 ###ANXIETIES UPDATE
-PATCH http://localhost:3000/anxieties/11
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Njk5NDA4NTN9.95nUoTUDL92BDMCTfb9goG9fAAIatopIJXH1KSWS8nw
+PATCH http://localhost:3000/anxieties/17
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzAxOTU0OTB9.A_j8mx69HEqtF7jW0_qU8MYobvHoHZDWsvpFvNVSOuI
 Content-Type: application/json
 
 {
   
 "life_theme": "Work",
-"intrusive_thought_or_feeling": "That Tom will keep me here forever",
-"obsessional_theme": "Catastrophizing",
+"intrusive_thought_or_feeling": "That Kendall will sabotage my promotion",
+"obsessional_theme": "Catastrophizing, MINDREADING",
 "opposite_thought": "I know that Kendall will have my back",
 "opposite_action": "Breathe deep",
-"timer": 1
+"timer": 14, 
+"progress": "feeling ok"
 
 }
 
@@ -70,5 +69,5 @@ Content-Type: application/json
 
 # ###ANXIETIES DESTROY
 # DELETE http://localhost:3000/anxieties/1.json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjkwNjc2MTR9.2Vef-f-eagzJVw_dIzGuFLMUq8dP5B9Y-hFxvicsgSM
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzAxOTU0OTB9.A_j8mx69HEqtF7jW0_qU8MYobvHoHZDWsvpFvNVSOuI
 # Content-Type: application/json
